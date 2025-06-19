@@ -16,7 +16,7 @@ const middleware = [
 app.use(middleware);
 
 // Routes
-app.use(routes);
+app.use("/api", routes);
 
 // Initial Route
 app.get("/", (req: Request, res: Response) => {
