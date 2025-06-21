@@ -27,6 +27,7 @@ borrowSchema.static(
     if (book.copies < quantity) throw new Error("Not enough copies available");
 
     book.copies -= quantity;
+    if (book.copies === 0) book.available = false;
     await book.save();
     return true;
   }

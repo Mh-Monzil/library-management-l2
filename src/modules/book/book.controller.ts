@@ -24,6 +24,7 @@ const getAllBooks = async (req: Request, res: Response) => {
     const sortBy = req.query.sortBy as string;
     const sort = req.query.sort === "asc" ? 1 : -1;
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const query: any = {};
 
     if (filter) {

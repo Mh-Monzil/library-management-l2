@@ -8,10 +8,12 @@ const borrowBook = async (req: Request, res: Response) => {
   );
 
   if (!checkQuantity) {
-    return res.status(400).json({
+    res.status(400).json({
       success: false,
       message: "Not enough copies available",
+      data: null,
     });
+    return;
   }
 
   const result = await Borrow.create(req.body);
