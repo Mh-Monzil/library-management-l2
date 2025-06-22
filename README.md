@@ -28,6 +28,8 @@ A robust and scalable backend application for managing library books and borrow 
 
 ## 📌 API Endpoints
 
+## Book Routes
+
 | Method | Endpoint             | Description                                               |
 | ------ | -------------------- | --------------------------------------------------------- |
 | POST   | `/api/books`         | Create a new book                                         |
@@ -36,7 +38,7 @@ A robust and scalable backend application for managing library books and borrow 
 | PUT    | `/api/books/:bookId` | Update a book (e.g., change copies)                       |
 | DELETE | `/api/books/:bookId` | Delete a book by its ID                                   |
 
-## Borrowed Book Routes
+## Borrow Routes
 
 | Method | Endpoint      | Description                                           |
 | ------ | ------------- | ----------------------------------------------------- |
