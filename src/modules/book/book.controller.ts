@@ -70,6 +70,7 @@ const updateBook = async (req: Request, res: Response) => {
   try {
     const result = await Book.findByIdAndUpdate(req.params.bookId, req.body, {
       new: true,
+      runValidators: true,
     });
     res.status(200).json({
       success: true,

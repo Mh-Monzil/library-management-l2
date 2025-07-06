@@ -8,8 +8,12 @@ import routes from "./routes";
 
 const app = express();
 
+const corsOptions = {
+  origin: ["http://localhost:5173"],
+};
+
 const middleware = [
-  cors(),
+  cors(corsOptions),
   express.json(),
   express.urlencoded({ extended: true }),
 ];
